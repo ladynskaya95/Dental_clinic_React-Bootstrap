@@ -2,36 +2,41 @@ import React from 'react'
 
 const Header = () => {
   return (
-    <div className="container-fluid">
+    <>
       <header>
         <div className="content">
           <div className="row header-body">
-            <div className="col-4 header-logo menu">
+            <div className="col-8 header-logo menu">
               <button className="menu-button">
                 <img src="" alt="" className="menu-icon" />
                 Меню
               </button>
               <nav>
-                <ul className="menu-list">
-                  <li className="menu-item">
+                <ul className="menu-list row">
+                  <li className="menu-item col-2">
                     <a href="#" className="menu-link">
                       Головна
                     </a>
                   </li>
-                  <li className="menu-item">
+                  <li className="menu-item col-2">
                     <a href="#" className="menu-link">
                       Про нас
                     </a>
-                    <li className="menu-item">
-                      <a href="#" className="menu-link">
-                        Послуги
-                      </a>
-                    </li>
-                    <li className="menu-item">
-                      <a href="#" className="menu-link">
-                        Контакти
-                      </a>
-                    </li>
+                  </li>
+                  <li className="menu-item col-2">
+                    <a href="#" className="menu-link">
+                      Послуги
+                    </a>
+                  </li>
+                  <li className="menu-item col-2">
+                    <a href="#" className="menu-link">
+                      Контакти
+                    </a>
+                  </li>
+                  <li className="menu-item col-2">
+                    <a href="#" className="menu-link">
+                      Магазин
+                    </a>
                   </li>
                 </ul>
               </nav>
@@ -39,7 +44,7 @@ const Header = () => {
                 <img src="" alt="" className="header-logo_img" />
               </a>
             </div>
-            <div className="col-4 header-schedule">
+            <div className="col-2 header-schedule">
               <div className="header-schedule_title">
                 <div className="header-schedule_image">
                   <img src="" alt="" className="header-schedule_icon" />
@@ -57,9 +62,9 @@ const Header = () => {
                 </li>
               </ul>
             </div>
-            <div className="col-4 phone">
+            <div className="col-2 phone">
               <a href="tel:+380666455678" className="phone-link">
-                +38(066)-645-56-78
+                (044) 333-64-72 (044) 333-64-73
               </a>
               <div className="phone-callback">
                 <a href="#" className="phone-callback_link">
@@ -70,7 +75,7 @@ const Header = () => {
           </div>
         </div>
       </header>
-    </div>
+    </>
   );
 }
 
