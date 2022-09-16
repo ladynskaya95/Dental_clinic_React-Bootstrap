@@ -10,12 +10,12 @@ const PrevContent = () => {
             <h2>Гарантований результат</h2>
           </div>
           <div className="prev-more">
-            <a href="#" className="prev-more_link">
+            <a href="" className="prev-more_link">
               Дізнатися детальніше
             </a>
           </div>
           <div className="prev-proposal">
-            {/* <a href="#" className="prev-proposal_link"> */}
+            <a href="" className="prev-proposal_link">
               Ще пропозиція
               <img src="" alt="" className="prev-proposal_icon" />
             </a>

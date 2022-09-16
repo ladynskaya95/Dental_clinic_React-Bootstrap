@@ -14,33 +14,33 @@ const Header = () => {
               <nav>
                 <ul className="menu-list row">
                   <li className="menu-item col-2">
-                    <a href="#" className="menu-link">
+                    <a href="" className="menu-link">
                       Головна
                     </a>
                   </li>
                   <li className="menu-item col-2">
-                    <a href="#" className="menu-link">
+                    <a href="" className="menu-link">
                       Про нас
                     </a>
                   </li>
                   <li className="menu-item col-2">
-                    <a href="#" className="menu-link">
+                    <a href="" className="menu-link">
                       Послуги
                     </a>
                   </li>
                   <li className="menu-item col-2">
-                    <a href="#" className="menu-link">
+                    <a href="" className="menu-link">
                       Контакти
                     </a>
                   </li>
                   <li className="menu-item col-2">
-                    <a href="#" className="menu-link">
+                    <a href="" className="menu-link">
                       Магазин
                     </a>
                   </li>
                 </ul>
               </nav>
-              <a href="#">
+              <a href="">
                 <img src="" alt="" className="header-logo_img" />
               </a>
             </div>
@@ -67,7 +67,7 @@ const Header = () => {
                 (044) 333-64-72 (044) 333-64-73
               </a>
               <div className="phone-callback">
-                <a href="#" className="phone-callback_link">
+                <a href="" className="phone-callback_link">
                   Записатися на консультацію
                 </a>
               </div>
