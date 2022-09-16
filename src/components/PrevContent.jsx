@@ -15,7 +15,7 @@ const PrevContent = () => {
             </a>
           </div>
           <div className="prev-proposal">
-            <a href="#" className="prev-proposal_link">
+            {/* <a href="#" className="prev-proposal_link"> */}
               Ще пропозиція
               <img src="" alt="" className="prev-proposal_icon" />
             </a>
