@@ -1,18 +1,26 @@
 import React from 'react'
+import Image from "react-bootstrap/Image";
+
+import logo from "../img/logo.png";
 
 const Header = () => {
   return (
     <>
       <header>
-        <div className="content">
+        <div>
           <div className="row header-body">
-            <div className="col-8 header-logo menu">
-              <button className="menu-button">
-                <img src="" alt="" className="menu-icon" />
-                Меню
-              </button>
+            <div className="col-9 header-logo menu">
               <nav>
                 <ul className="menu-list row">
+                  <li className="menu-item col-2 p-0">
+                    <Image
+                      fluid
+                      src={logo}
+                      alt="logo"
+                      className="header-logo_img"
+                    />
+                    <span className="header-logo-txt">IT-DENT</span>
+                  </li>
                   <li className="menu-item col-2">
                     <a href="/" className="menu-link">
                       Головна
@@ -40,16 +48,13 @@ const Header = () => {
                   </li>
                 </ul>
               </nav>
-              <a href="/">
-                <img src="" alt="" className="header-logo_img" />
-              </a>
             </div>
             <div className="col-2 header-schedule">
               <div className="header-schedule_title">
-                <div className="header-schedule_image">
-                  <img src="" alt="" className="header-schedule_icon" />
+                <div className="header-schedule_text">
+                  <i className="icon-time header-schedule_icon"></i>
+                  <span> Графік роботи</span>
                 </div>
-                <div className="header-schedule_text">Графік роботи</div>
               </div>
               <ul className="header-schedule_body">
                 <li className="header-schedule_item">
@@ -62,9 +67,9 @@ const Header = () => {
                 </li>
               </ul>
             </div>
-            <div className="col-2 phone">
+            <div className="col-1 phone">
               <a href="tel:+380666455678" className="phone-link">
-                (044) 333-64-72 (044) 333-64-73
+                +38(066)645-56-78
               </a>
               <div className="phone-callback">
                 <a href="/callback" className="phone-callback_link">
