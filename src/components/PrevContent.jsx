@@ -1,5 +1,6 @@
 import React from 'react'
 import Image from "react-bootstrap/Image";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import img from "../img/poster.jpg";
 
@@ -16,8 +17,9 @@ const PrevContent = () => {
             </div>
             <div className="prev-more">
               <a href="/details" className="prev-more_link">
-                Дізнатися детальніше
+                Дізнатися більше
               </a>
+              <FontAwesomeIcon icon="fa-solid fa-arrow-right" />
             </div>
             <div className="prev-proposal">
               <a href="/proposal" className="prev-proposal_link">

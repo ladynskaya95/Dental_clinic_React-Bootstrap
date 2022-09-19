@@ -1,0 +1,35 @@
+.about{
+    margin: 30px 0;
+    &-title{
+        color: #528AF1;
+        font-size: 50px;
+        margin-bottom: 20px;
+    }
+    &_text{
+        margin: 25px 0;
+        color:rgb(22, 57, 122);
+    }
+  
+    &_image{
+        background-color: rgba(220, 230, 253, 0.842);
+        padding: 6px;
+      
+        &-1{
+        margin-top: 15px;
+        width: 44%;
+     }
+     &-2{
+        position: absolute;
+        left: 356px;
+        bottom: -394px;
+        width: 28%;
+     }
+      &-3{
+       position: absolute;
+        left: 513px;
+        bottom: -672px;
+     }
+
+    }
+     
+}

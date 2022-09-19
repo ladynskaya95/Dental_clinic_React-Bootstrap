@@ -25,10 +25,28 @@
     &-more{
         position: relative;
         top: -300px;
+        background-color: rgb(144, 176, 235);
+        border: 1px solid rgb(144, 176, 235);
+        border-radius: 15px;
+        width: 13%;
+        padding: 10px 13px 13px 18px;
+
+        &_link{
+            color: aliceblue;
+            &:hover,
+            &:focus {
+                    color: rgb(144, 176, 235);
+                }
+        }
+
+         &:hover,
+         &:focus {
+                background-color: aliceblue;
+                color: rgb(144, 176, 235);
+                border: 1px solid rgb(144, 176, 235);
+            }
     }
     &-proposal{
-        position: relative;
-        top: 30px;
         text-align:center;
         
         &_link{
