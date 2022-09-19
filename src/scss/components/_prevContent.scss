@@ -1,0 +1,38 @@
+.prev{
+    max-height: 720px;
+    &-content{
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: auto;
+  width: 100vw;
+
+        .content{
+            position: relative;
+            top: -200px;
+        }
+    }
+    &-title{
+        position: relative;
+        top: -350px;
+        color:rgb(82, 138, 241);
+
+        h1{
+            font-weight: 600 !important;
+            font-size: 50px;
+            margin-bottom: 10px;
+        }
+    }
+    &-more{
+        position: relative;
+        top: -300px;
+    }
+    &-proposal{
+        position: relative;
+        top: 30px;
+        text-align:center;
+        
+        &_link{
+            color: white !important;
+        }
+    }
+}

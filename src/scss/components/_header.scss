@@ -11,13 +11,14 @@ header{
 
         .header-logo_img{
         z-index: 100;
-        width: 100px;
+        width: 120px;
         background: transparent;
     }
 
     .header-logo-txt{
         color:aliceblue;
-        font-size: 18px;
+        font-size: 32px;
+        font-weight: 500;
         margin-left: 20px;
     }
 
@@ -25,16 +26,30 @@ header{
         &-list{
             text-align: center;
             align-items: center;
-        }
+            margin-top: 15px;
+            
+            li a {
+                color:aliceblue;
+                font-size: 18px;
+            }}
+         &-item{
+            width: 14% !important;
+         }
+         &-item-logo{
+             width: 29% !important;
+         }
+        
     }
 
     .header-schedule{
-        width: 9%;
+        width: 10%;
         display: flex;
         color:azure;
         font-size: 14px;
         align-items: center;
         flex-direction: column;
+        margin-top: 10px;
+        text-align: left;
 
         &_time{
             color: rgb(107, 108, 109);
@@ -46,10 +61,34 @@ header{
         display: flex;
         align-items: center;
         flex-direction: column;
+        text-align: center;
         &-link{
            color: rgb(85, 83, 83);
            font-size: 22px; 
            font-weight: 500;
+        }
+        &-callback{
+            padding: 10px 7px 0 7px;
+            border: 1px solid aliceblue;
+            margin: 10px 0 5px 0;
+            border-radius: 40px;
+            width: 63%;
+            &:hover,
+            &:focus {
+                background-color: aliceblue;
+                color: rgb(144, 176, 235);
+                border: 1px solid rgb(144, 176, 235);
+            }
+        }
+
+        &-callback_link{
+            color:aliceblue;
+            font-size: 14px;
+
+            &:hover,
+            &:focus {
+                color: rgb(144, 176, 235);
+            }
         }
     }
 

@@ -12,7 +12,7 @@ const Header = () => {
             <div className="col-9 header-logo menu">
               <nav>
                 <ul className="menu-list row">
-                  <li className="menu-item col-2 p-0">
+                  <li className="menu-item-logo col-2 p-0">
                     <Image
                       fluid
                       src={logo}
@@ -73,7 +73,7 @@ const Header = () => {
               </a>
               <div className="phone-callback">
                 <a href="/callback" className="phone-callback_link">
-                  Записатися на консультацію
+                  <p>Записатися на консультацію</p>
                 </a>
               </div>
             </div>
