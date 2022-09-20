@@ -16,8 +16,8 @@ header{
     }
 
     .header-logo-txt{
-        color:aliceblue;
-        font-size: 32px;
+        color: #297BB6;
+        font-size: 38px;
         font-weight: 500;
         margin-left: 20px;
     }
@@ -37,6 +37,7 @@ header{
          }
          &-item-logo{
             width: 29% !important;
+            
             border: 1px solid rgba(255, 255, 255, 0.514);
             border-top-style: none;
             border-bottom-style: none;
@@ -59,7 +60,7 @@ header{
         border-bottom-style: none;
 
         &_time{
-            color: rgb(107, 108, 109);
+            color: rgb(89, 91, 92);
         }
     }
 
@@ -70,16 +71,16 @@ header{
         flex-direction: column;
         text-align: center;
         &-link{
-           color: rgb(85, 83, 83);
+           color: rgb(159, 218, 252);
            font-size: 22px; 
            font-weight: 500;
         }
         &-callback{
-            padding: 10px 7px 0 7px;
-            border: 1px solid aliceblue;
+            padding: 13px 7px 0 7px;
+            border: 1px solid rgba(240, 248, 255, 0.767);
             margin: 10px 0 5px 0;
-            border-radius: 40px;
-            width: 63%;
+            border-radius: 36px;
+            width: 67%;
             &:hover,
             &:focus {
                 background-color: aliceblue;
@@ -89,7 +90,7 @@ header{
         }
 
         &-callback_link{
-            color:aliceblue;
+            color:rgba(240, 248, 255, 0.849);
             font-size: 14px;
 
             &:hover,

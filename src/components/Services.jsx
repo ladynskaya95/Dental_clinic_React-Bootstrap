@@ -5,16 +5,16 @@ const Services = () => {
     <>
       <section className="services">
         <div className="content">
-          <h2 className="services_title">Стоматологічні послуги</h2>
-          <p>
+          <h2 className="services_title text-center">Стоматологічні послуги</h2>
+          <p className="text-center services_p">
             Ми турбуємося про здоров’я та гарну усмішку наших пацієнтів,
             застосовуючи найкращі досягнення сучасної стоматології для
             ефективного та безпечного лікування зубів.
           </p>
           <ul className="services-list row">
-            <li className=" services-item col-3">
+            <li className=" services-item col-2">
               <div className="services_picture">
-                <img src="" alt="" className="services-icon" />
+                <i className="fa-solid fa-tooth services-icon"></i>
               </div>
               <div className="services-text">
                 <h3 className="services-diagnostics">Діагностика</h3>
@@ -32,9 +32,9 @@ const Services = () => {
                 </ul>
               </div>
             </li>
-            <li className="services-item col-3">
+            <li className="services-item col-2">
               <div className="services_picture">
-                <img src="" alt="" className="services-icon" />
+                <i className="fa-solid fa-tooth services-icon"></i>
               </div>
               <div className="services-text">
                 <h3 className="services-whitening">Відбілювання зубів</h3>
@@ -48,9 +48,9 @@ const Services = () => {
                 </ul>
               </div>
             </li>
-            <li className="services-item col-3">
+            <li className="services-item col-2">
               <div className="services_picture">
-                <img src="" alt="" className="services-icon" />
+                <i className="fa-solid fa-tooth services-icon"></i>
               </div>
               <div className="services-text">
                 <h3 className="services-children">Дитяча стоматологія</h3>
@@ -74,9 +74,9 @@ const Services = () => {
                 </ul>
               </div>
             </li>
-            <li className="services-item col-3">
+            <li className="services-item col-2">
               <div className="services_picture">
-                <img src="" alt="" className="services-icon" />
+                <i className="fa-solid fa-tooth services-icon"></i>
               </div>
               <div className="services-text">
                 <h3 className="services-perio">Гігієна та пародонтологія</h3>
@@ -90,9 +90,9 @@ const Services = () => {
                 </ul>
               </div>
             </li>
-            <li className="services-item col-3">
+            <li className="services-item col-2">
               <div className="services_picture">
-                <img src="" alt="" className="services-icon" />
+                <i className="fa-solid fa-tooth services-icon"></i>
               </div>
               <div className="services-text">
                 <h3 className="services-ortho">Ортодонтія</h3>
@@ -106,9 +106,9 @@ const Services = () => {
                 </ul>
               </div>
             </li>
-            <li className="services-item col-3">
+            <li className="services-item col-2">
               <div className="services_picture">
-                <img src="" alt="" className="services-icon" />
+                <i className="fa-solid fa-tooth services-icon"></i>
               </div>
               <div className="services-text">
                 <h3 className="services-therapy">Терапія</h3>
@@ -124,9 +124,9 @@ const Services = () => {
                 </ul>
               </div>
             </li>
-            <li className="services-item col-3">
+            <li className="services-item col-2">
               <div className="services_picture">
-                <img src="" alt="" className="services-icon" />
+                <i className="fa-solid fa-tooth services-icon"></i>
               </div>
               <div className="services-text">
                 <h3 className="services-surgery">Хірургія та імплантація</h3>
@@ -140,9 +140,9 @@ const Services = () => {
                 </ul>
               </div>
             </li>
-            <li className="services-item col-3">
+            <li className="services-item col-2">
               <div className="services_picture">
-                <img src="" alt="" className="services-icon" />
+                <i className="fa-solid fa-tooth services-icon"></i>
               </div>
               <div className="services-text">
                 <h3 className="services-aesthetic">Естетичне протезування</h3>

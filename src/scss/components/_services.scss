@@ -1,0 +1,53 @@
+.services{
+    background-image: linear-gradient(60deg, rgb(146, 204, 255) 10%, rgb(104, 150, 235) 90%);
+    margin: 40px 0;
+    padding: 40px 0;
+
+    &_title{
+        padding: 30px 0;
+        color: #297BB6;
+        font-size: 40px;
+        font-weight: 600;
+    }
+    &_p{
+        font-size: 20px;
+        color:#1e5b86;
+        padding-bottom: 10px;
+    }
+
+    &-list{
+        font-size: 15px;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    &-item{
+        display: flex;
+        margin: 15px 20px 20px 20px;
+        background-color: rgba(120, 169, 248, 0.664);
+        width: 20%;
+        padding: 15px 5px;
+
+        &-list-li{
+            color:rgb(198, 240, 253);
+        }
+    }
+    &-picture{
+        margin-right: 10px;
+    }
+
+    &-icon{
+        color: white;
+        width: 15px;
+        margin-right: 5px;
+    }
+    &-text{
+        h3{
+            font-size: 22px;
+            text-transform: uppercase;
+            color: white;
+        }
+    }
+
+
+}
