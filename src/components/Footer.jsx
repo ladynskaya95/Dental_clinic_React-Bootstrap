@@ -4,14 +4,14 @@ const Footer = () => {
   return (
     <>
       <footer>
-        <div className="question">
+        <div className="question text-center">
           <h2>Залишилися питання? Отримати відповідь:</h2>
           <p>(044) 333-64-72 </p>
           <p>(044) 333-64-73</p>
-          <button type="button" className="phone-callback_link"></button>
+          <button type="button" className="phone-callback_link btn btn-primary">Запис на прийом</button>
         </div>
         <div className="footer_icons"></div>
-        <div className="content row">
+        <div className="footer row">
           <div className="col-4 footer_address"></div>
           <div className="col-4 footer_stomat">
             <ul className="stomat">
@@ -24,7 +24,7 @@ const Footer = () => {
               <li className="stomat-item">Питання та відповіді</li>
             </ul>
           </div>
-          <div className="col-4 footer">
+          <div className="col-4">
             <ul className="footer_info">
               Корисна інформація
               <li className="info-item">Подарунковий сертифікат</li>

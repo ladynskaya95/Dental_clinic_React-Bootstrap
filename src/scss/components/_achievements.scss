@@ -1,0 +1,30 @@
+.achievements{
+    margin: 10px 0;
+    padding: 20px 0;
+    h2{
+        color: rgb(21, 90, 180);
+        font-size: 40px;
+    }
+    p{
+        color: rgb(89, 91, 92);
+        font-size: 18px;
+    }
+
+  &-list{
+    justify-content: center;
+  }
+}
+
+.card-body{
+    height: 240px !important;
+    background-color: aliceblue;
+    border-color: cornflowerblue;
+
+    h4{
+        color: cornflowerblue;
+    }
+    p{
+        color: rgb(21, 90, 180);
+        font-size: 16px;
+    }
+}
