@@ -33,11 +33,13 @@ header{
                 font-size: 18px;
             }}
          &-item{
-            width: 14% !important;
+            width: 20% !important;
          }
          &-item-logo{
             width: 29% !important;
-            
+            text-align: center;
+            align-items: center;
+            margin-top: 25px;
             border: 1px solid rgba(255, 255, 255, 0.514);
             border-top-style: none;
             border-bottom-style: none;

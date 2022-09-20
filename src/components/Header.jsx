@@ -1,51 +1,42 @@
 import React from 'react'
+import { Link} from "react-router-dom";
+
 import Image from "react-bootstrap/Image";
 
 import logo from "../img/logo.png";
 
 const Header = () => {
+  const links = [
+    { id: 1, path: "/", name: "Головна" },
+    { id: 2, path: "/about", name: "Про нас" },
+    { id: 3, path: "/services", name: "Послуги" },
+    { id: 4, path: "/contacts", name: "Контакти" },
+    { id: 5, path: "/store", name: "Магазин" },
+  ];
   return (
     <>
       <header>
         <div>
           <div className="row header-body">
             <div className="col-9 header-logo menu">
-              <nav>
-                <ul className="menu-list row">
-                  <li className="menu-item-logo col-2 p-0">
-                    <Image
-                      fluid
-                      src={logo}
-                      alt="logo"
-                      className="header-logo_img"
-                    />
-                    <span className="header-logo-txt">IT-DENT</span>
-                  </li>
-                  <li className="menu-item col-2">
-                    <a href="/" className="menu-link">
-                      Головна
-                    </a>
-                  </li>
-                  <li className="menu-item col-2">
-                    <a href="/about" className="menu-link">
-                      Про нас
-                    </a>
-                  </li>
-                  <li className="menu-item col-2">
-                    <a href="/services" className="menu-link">
-                      Послуги
-                    </a>
-                  </li>
-                  <li className="menu-item col-2">
-                    <a href="/contacts" className="menu-link">
-                      Контакти
-                    </a>
-                  </li>
-                  <li className="menu-item col-2">
-                    <a href="/store" className="menu-link">
-                      Магазин
-                    </a>
-                  </li>
+              <nav className="row">
+                <div className="menu-item-logo col-3 p-0">
+                  <Image
+                    fluid
+                    src={logo}
+                    alt="logo"
+                    className="header-logo_img"
+                  />
+                  <span className="header-logo-txt">IT-DENT</span>
+                </div>
+                <ul className="menu-list col-8 row">
+                  {links.map((link) => (
+                    <li key={link.id} className="menu-item col-3">
+                      <Link to={link.path} className="menu-link">
+                        {link.name}
+                      </Link>
+                    </li>
+                  ))}
                 </ul>
               </nav>
             </div>

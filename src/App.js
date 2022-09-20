@@ -1,21 +1,25 @@
 import "./scss/App.scss";
+import { Routes, Route } from "react-router-dom";
 
 import Header from "./components/Header";
-import PrevContent from "./components/PrevContent";
-import AboutContent from "./components/AboutContent"
-import Services from "./components/Services";
-import Achievements from "./components/Achievements";
-import Footer from "./components/Footer";
+import Home from "./pages/Home"
+import About from "./pages/About";
+import AllServices from "./pages/AllServices";
+import Contacts from './pages/Contacts';
+import Store from './pages/Store';
+
 
 function App() {
   return (
     <div className="App container-fluid">
       <Header />
-      <PrevContent />
-      <AboutContent />
-      <Services />
-      <Achievements/>
-      <Footer/>
+      <Routes>
+        <Route path="" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/services" element={<AllServices />} />
+        <Route path="/contacts" element={<Contacts />} />
+        <Route path="/store" element={<Store />} />
+      </Routes>
     </div>
   );
 }
