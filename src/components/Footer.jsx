@@ -31,8 +31,8 @@ const Footer = () => {
           <div className="col-4 footer_address"></div>
           <div className="col-4 footer_stomat">
             <ul className="stomat">
-              Стоматологія
-              {dentistry.map((item,i) => (
+              <h4>Стоматологія</h4>
+              {dentistry.map((item, i) => (
                 <li key={i} className="stomat-item">
                   {item}
                 </li>
@@ -41,9 +41,11 @@ const Footer = () => {
           </div>
           <div className="col-4">
             <ul className="footer_info">
-              Корисна інформація
+              <h4>Корисна інформація</h4>
               {info.map((inf, i) => (
-                <li key={i} className="info-item">{inf}</li>
+                <li key={i} className="info-item">
+                  {inf}
+                </li>
               ))}
             </ul>
           </div>

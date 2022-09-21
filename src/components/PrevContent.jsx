@@ -16,7 +16,7 @@ const PrevContent = () => {
               <h2>Гарантований результат</h2>
             </div>
             <div className="prev-more">
-              <a href="/details" className="prev-more_link">
+              <a href="/details" className="btn btn-primary prev-more_link">
                 Дізнатися більше
               </a>
               <FontAwesomeIcon icon="fa-solid fa-arrow-right" />

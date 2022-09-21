@@ -5,7 +5,12 @@ import Image from "react-bootstrap/Image";
 
 import logo from "../img/logo.png";
 
+import AppContext from "../AppContext";
+
 const Header = () => {
+  const { show, setShow } = React.useContext(AppContext);
+  const handleShow = () => setShow(true);
+
   const links = [
     { id: 1, path: "/", name: "Головна" },
     { id: 2, path: "/about", name: "Про нас" },
@@ -63,9 +68,12 @@ const Header = () => {
                 +38(066)645-56-78
               </a>
               <div className="phone-callback">
-                <a href="/callback" className="phone-callback_link">
-                  <p>Записатися на консультацію</p>
-                </a>
+                <button
+                  onClick={handleShow}
+                  className="btn btn-outline-primary phone-callback_link"
+                >
+                  Записатися на консультацію
+                </button>
               </div>
             </div>
           </div>

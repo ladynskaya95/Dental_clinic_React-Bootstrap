@@ -24,7 +24,7 @@ const Achievements = () => {
     <>
       <section className="achievements">
         <div className="content">
-          <h2 className="text-center">Стоматологія "IT-Dent це"</h2>
+          <h2 className="text-center">Стоматологія "IT-Dent" це</h2>
           <p className="text-center">
             Ідеальні умови для комфортного та якісного стоматологічного
             лікування, кращі технології, професійна команда та комплексний
@@ -34,7 +34,7 @@ const Achievements = () => {
           </p>
           <ul className="achievements-list row">
             {cardItems.map((items, i) => (
-              <li key={i}className="col-2 archievements-item">
+              <li key={i} className="col-2 archievements-item">
                 <div className="card text-bg-light">
                   <div className="achievements_text card-body">
                     <h4>{items.header}</h4>

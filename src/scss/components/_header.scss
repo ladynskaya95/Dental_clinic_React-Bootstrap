@@ -79,26 +79,16 @@ header{
         }
         &-callback{
             padding: 13px 7px 0 7px;
-            border: 1px solid rgba(240, 248, 255, 0.767);
             margin: 10px 0 5px 0;
-            border-radius: 36px;
+            border-radius: 36px !important;
             width: 67%;
-            &:hover,
-            &:focus {
-                background-color: aliceblue;
-                color: rgb(144, 176, 235);
-                border: 1px solid rgb(144, 176, 235);
-            }
+           
         }
 
         &-callback_link{
-            color:rgba(240, 248, 255, 0.849);
             font-size: 14px;
-
-            &:hover,
-            &:focus {
-                color: rgb(144, 176, 235);
-            }
+            color:aliceblue !important;
+            border-color: white;
         }
     }
 
