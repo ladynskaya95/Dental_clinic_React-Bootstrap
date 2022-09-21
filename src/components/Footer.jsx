@@ -1,6 +1,13 @@
 import React from 'react'
 
+import AppContext from "../AppContext";
+
+import Map from "../components/Map"
+
 const Footer = () => {
+    const { show, setShow } = React.useContext(AppContext);
+    const handleShow = () => setShow(true);
+
   const dentistry = [
     "Статті" ,
     "Відгуки" ,
@@ -16,19 +23,22 @@ const Footer = () => {
     "Політика конфіденційності" ,
   ];
   return (
+  
     <>
       <footer>
         <div className="question text-center">
           <h2>Залишилися питання? Отримати відповідь:</h2>
           <p>(044) 333-64-72 </p>
           <p>(044) 333-64-73</p>
-          <button type="button" className="phone-callback_link btn btn-primary">
+          <button onClick={handleShow} type="button" className="phone-callback_link btn btn-primary">
             Запис на прийом
           </button>
         </div>
         <div className="footer_icons"></div>
         <div className="footer row">
-          <div className="col-4 footer_address"></div>
+          <div className="col-4 footer_address">
+            <Map/>
+          </div>
           <div className="col-4 footer_stomat">
             <ul className="stomat">
               <h4>Стоматологія</h4>

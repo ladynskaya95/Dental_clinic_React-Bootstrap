@@ -1,6 +1,8 @@
 import React, {useState} from "react";
-import "./scss/App.scss";
 import { Routes, Route } from "react-router-dom";
+
+import "./scss/App.scss";
+import "../node_modules/leaflet/dist/leaflet.css";
 
 import Header from "./components/Header";
 import Home from "./pages/Home"
@@ -14,7 +16,6 @@ import AppContext from "./AppContext";
 
 function App() {
   const [show, setShow] = useState(false);
-
 
   return (
     <AppContext.Provider value={{ show, setShow }}>
