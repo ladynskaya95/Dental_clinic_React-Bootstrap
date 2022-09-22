@@ -7,10 +7,11 @@ import "../node_modules/leaflet/dist/leaflet.css";
 import Header from "./components/Header";
 import Home from "./pages/Home"
 import About from "./pages/About";
-import AllServices from "./pages/AllServices";
+import AllServices from "./pages/services/AllServices";
 import Contacts from './pages/Contacts';
 import Store from './pages/Store';
 import Callback from "./components/Callback";
+import FirstAppointment from "./pages/services/FirstAppointment";
 
 import AppContext from "./AppContext";
 
@@ -21,11 +22,15 @@ function App() {
     <AppContext.Provider value={{ show, setShow }}>
       <div className="App container-fluid">
         <Header />
-        <Callback/>
+        <Callback />
         <Routes>
           <Route path="" element={<Home />} />
           <Route path="/about" element={<About />} />
-          <Route path="/services" element={<AllServices />} />
+          <Route path="/services/*" element={<AllServices />} />
+          {/* <Route
+            path="/services/first_appointment"
+            element={<FirstAppointment />}
+          /> */}
           <Route path="/contacts" element={<Contacts />} />
           <Route path="/store" element={<Store />} />
         </Routes>
