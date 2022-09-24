@@ -14,6 +14,19 @@ import Endodontics from "./Endodontics";
 import Perio from "./Perio";
 
 const AllServices = () => {
+const categories = [
+  { component: <FirstAppointment /> },
+  { component: <Aesthetics /> },
+  { component: <OralHygiene /> },
+  { component: <Children /> },
+  { component: <ToothDecay /> },
+  { component: <Occlusion /> },
+  { component: <Implantation /> },
+  { component: <Surgery /> },
+  { component: <Endodontics /> },
+  { component: <Perio /> },
+];
+
   return (
     <div className="all_services">
       <Nav fill variant="tabs" className="all_services_menu">
@@ -48,7 +61,8 @@ const AllServices = () => {
           <Nav.Link eventKey="link-9">Лікування ясен</Nav.Link>
         </Nav>
         <div className="all_services_content col-9">
-          <FirstAppointment />
+        
+          {/* <FirstAppointment />
           <Aesthetics />
           <OralHygiene />
           <Children />
@@ -57,7 +71,7 @@ const AllServices = () => {
           <Implantation />
           <Surgery />
           <Endodontics />
-          <Perio/>
+          <Perio /> */}
         </div>
       </div>
     </div>
