@@ -46,9 +46,6 @@ const AllServices = () => {
           <Nav.Link eventKey="link-7">Хірургія</Nav.Link>
           <Nav.Link eventKey="link-8">Лікування каналів</Nav.Link>
           <Nav.Link eventKey="link-9">Лікування ясен</Nav.Link>
-          <Nav.Link eventKey="disabled" disabled>
-            Disabled
-          </Nav.Link>
         </Nav>
         <div className="all_services_content col-9">
           <FirstAppointment />
