@@ -1,8 +1,10 @@
 import React from 'react'
+import { Outlet } from "react-router-dom";
 
 const FirstAppointment = () => {
   return (
     <>
+    <Outlet/>
       <div>
         <h2>Перший прийом</h2>
         <p>

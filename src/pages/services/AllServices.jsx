@@ -61,8 +61,8 @@ const categories = [
           <Nav.Link eventKey="link-9">Лікування ясен</Nav.Link>
         </Nav>
         <div className="all_services_content col-9">
-        
-          {/* <FirstAppointment />
+          <FirstAppointment />
+          
           <Aesthetics />
           <OralHygiene />
           <Children />
@@ -71,7 +71,7 @@ const categories = [
           <Implantation />
           <Surgery />
           <Endodontics />
-          <Perio /> */}
+          <Perio />
         </div>
       </div>
     </div>

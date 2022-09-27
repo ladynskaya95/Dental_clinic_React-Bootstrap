@@ -7,4 +7,14 @@
     background: rgba(23, 92, 204, 0.664);
     padding: 20px 0;
     color:aliceblue;
+
+    &_icons{
+        background: rgba(65, 121, 211, 0.753);
+        
+        .icons{
+            align-items: center;
+            justify-content: center;
+        }
+    }
 }
+
