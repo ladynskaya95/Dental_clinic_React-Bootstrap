@@ -12,6 +12,15 @@ import Contacts from './pages/Contacts';
 import Store from './pages/Store';
 import Callback from "./components/Callback";
 import FirstAppointment from "./pages/services/FirstAppointment";
+import Aesthetics from "./pages/services/Aesthetics";
+import OralHygiene from "./pages/services/OralHygiene";
+import Children from "./pages/services/Children";
+import ToothDecay from "./pages/services/ToothDecay";
+import Occlusion from "./pages/services/Occlusion";
+import Implantation from "./pages/services/Implantation";
+import Surgery from "./pages/services/Surgery";
+import Endodontics from "./pages/services/Endodontics";
+import Perio from "./pages/services/Perio";
 
 import AppContext from "./AppContext";
 
@@ -24,18 +33,20 @@ function App() {
         <Header />
         <Callback />
         <Routes>
-          <Route path="" element={<Home />} />
+          <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
-          
-          <Route path="/services/">
-            <Route
-              path="/services/"
-              element={<AllServices />}
-            />
-            <Route
-              path="/services/first_appointment"
-              element={<FirstAppointment />}
-            />
+
+          <Route path="/services/*" element={<AllServices />}>
+            <Route path="first_appointment" element={<FirstAppointment />} />
+            <Route path="aesthetics" element={<Aesthetics />} />
+            <Route path="oralHygiene" element={<OralHygiene />} />
+            <Route path="children" element={<Children />} />
+            <Route path="toothDecay" element={<ToothDecay />} />
+            <Route path="occlusion" element={<Occlusion />} />
+            <Route path="implantation" element={<Implantation />} />
+            <Route path="surgery" element={<Surgery />} />
+            <Route path="endodontics" element={<Endodontics />} />
+            <Route path="perio" element={<Perio />} />
           </Route>
           <Route path="/contacts" element={<Contacts />} />
           <Route path="/store" element={<Store />} />
