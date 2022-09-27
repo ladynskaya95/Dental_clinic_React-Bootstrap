@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link} from "react-router-dom";
-
+import Dropdown from "react-bootstrap/Dropdown";
 import Image from "react-bootstrap/Image";
 
 import logo from "../img/logo.png";
@@ -14,7 +14,7 @@ const Header = () => {
   const links = [
     { id: 1, path: "/", name: "Головна" },
     { id: 2, path: "/about", name: "Про нас" },
-    { id: 3, path: "/services", name: "Послуги" },
+    { id: 3, path: "/services/first_appointment", name: "Послуги" },
     { id: 4, path: "/contacts", name: "Контакти" },
     { id: 5, path: "/store", name: "Магазин" },
   ];
@@ -32,7 +32,9 @@ const Header = () => {
                     alt="logo"
                     className="header-logo_img"
                   />
-                  <span className="header-logo-txt">IT-DENT</span>
+                  <span className="header-logo-txt">
+                    <Link to="/">IT-DENT</Link>
+                  </span>
                 </div>
                 <ul className="menu-list col-8 row">
                   {links.map((link) => (
