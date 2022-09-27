@@ -2,9 +2,9 @@ import React from 'react'
 
 const Occlusion = () => {
     return (
-      <div>
+      <div className="services_occlusion">
         <h2>Виправлення прикусу</h2>
-        <div className="services_occlusion row">
+        <div className="services_occlusion_row row">
           <div className="col-4 services_occlusion_item">Брекети</div>
           <div className="col-4 services_occlusion_item">
             Капи для вирівнювання зубів

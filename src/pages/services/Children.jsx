@@ -2,9 +2,9 @@ import React from "react";
 
 const Children = () => {
   return (
-    <div>
+    <div className="services_children">
       <h2>Дитячий прийом</h2>
-      <div className="services_children row">
+      <div className="services_children_row row">
         <div className="col-4 services_children_item">Лікування уві сні</div>
         <div className="col-4 services_children_item">
           Чищення молочних зубів

@@ -2,9 +2,9 @@ import React from 'react'
 
 const Surgery = () => {
   return (
-    <div>
+    <div className="services_surgery">
       <h2>Хірургія</h2>
-      <div className="services_surgery row">
+      <div className="services_surgery_row row">
         <div className="col-4 services_surgery_item">Пластика ясен</div>
         <div className="col-4 services_surgery_item">
           Видалення зубів

@@ -5,7 +5,7 @@ const FirstAppointment = () => {
   return (
     <>
     <Outlet/>
-      <div>
+      <div className="services_first_appointment">
         <h2>Перший прийом</h2>
         <p>
           Мета нашої першої зустрічі – зрозуміти, чого ви хочете, який вид

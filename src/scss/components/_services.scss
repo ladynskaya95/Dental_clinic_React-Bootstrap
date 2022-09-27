@@ -50,5 +50,92 @@
         }
     }
 
+    &_first_appointment{
+        margin: 20px;
+        h2{
+            text-align: center;
+        }
 
+    }
+
+    &_aesthetics{
+         margin: 20px;
+        h2{
+            text-align: center;
+        }
+        &_row{
+            justify-content: space-between;
+            margin: 10px;
+        }
+    }
+    &_oral_hygiene{
+         margin: 20px;
+        h2{
+            text-align: center;
+        }
+        &_row{
+            justify-content: space-between;
+            margin: 10px;
+        }
+    }
+      &_children{
+         margin: 20px;
+        h2{
+            text-align: center;
+        }
+        &_row{
+            justify-content: space-between;
+            margin: 10px;
+        }
+    }
+     &_tooth_decay{
+         margin: 20px;
+        h2{
+            text-align: center;
+        }
+        &_row{
+            justify-content: space-between;
+            margin: 10px;
+        }
+    }
+     &_occlusion{
+         margin: 20px;
+        h2{
+            text-align: center;
+        }
+        &_row{
+            justify-content: space-between;
+            margin: 10px;
+        }
+    }
+    &_implantation{
+         margin: 20px;
+        h2{
+            text-align: center;
+        }
+        &_row{
+            justify-content: space-between;
+            margin: 10px;
+        }
+    }
+    &_surgery{
+         margin: 20px;
+        h2{
+            text-align: center;
+        }
+        &_row{
+            justify-content: space-between;
+            margin: 10px;
+        }
+    }
+    &_perio{
+         margin: 20px;
+        h2{
+            text-align: center;
+        }
+        &_row{
+            justify-content: space-between;
+            margin: 10px;
+        }
+    }
 }
