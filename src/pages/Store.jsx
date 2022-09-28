@@ -4,7 +4,9 @@ import Nav from "react-bootstrap/Nav";import Button from "react-bootstrap/Button
 import Container from "react-bootstrap/Container";
 import Form from "react-bootstrap/Form";
 import Navbar from "react-bootstrap/Navbar";
-
+import {
+  MDBIcon
+} from "mdb-react-ui-kit";
 const Store = () => {
   return (
     <div>
@@ -21,7 +23,6 @@ const Store = () => {
               >
                 <Nav.Link href="#action1">Home</Nav.Link>
                 <Nav.Link href="#action2">Link</Nav.Link>
-                
               </Nav>
               <Form className="d-flex">
                 <Form.Control
@@ -32,6 +33,9 @@ const Store = () => {
                 />
                 <Button variant="outline-success">Search</Button>
               </Form>
+              <Nav.Item className="btn">
+                <MDBIcon fas icon="bars" size="2x" />
+              </Nav.Item>
             </Navbar.Collapse>
           </Container>
         </Navbar>
