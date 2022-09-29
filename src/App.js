@@ -9,7 +9,7 @@ import Home from "./pages/Home"
 import About from "./pages/About";
 import AllServices from "./pages/services/AllServices";
 import Contacts from './pages/Contacts';
-import Store from './pages/Store';
+import Store from './pages/services/store/Store';
 import Callback from "./components/Callback";
 import FirstAppointment from "./pages/services/FirstAppointment";
 import Aesthetics from "./pages/services/Aesthetics";

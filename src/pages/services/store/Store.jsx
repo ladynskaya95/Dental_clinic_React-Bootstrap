@@ -21,8 +21,10 @@ const Store = () => {
                 style={{ maxHeight: "100px" }}
                 navbarScroll
               >
-                <Nav.Link href="#action1">Home</Nav.Link>
-                <Nav.Link href="#action2">Link</Nav.Link>
+                <Nav.Link href="#action2" className="justify-content-end">
+                  {" "}
+                  +38 (044) 344 12 75
+                </Nav.Link>
               </Nav>
               <Form className="d-flex">
                 <Form.Control
@@ -73,6 +75,8 @@ const Store = () => {
           <Nav.Link as={NavLink} to="/services/perio">
             Поради стоматологів
           </Nav.Link>
+        </Nav>
+        <Nav className="store_nav_info all_services_nav flex-column ">
           <Nav.Link as={NavLink} to="/services/endodontics">
             Доставка та оплата
           </Nav.Link>
