@@ -4,6 +4,8 @@ import Nav from "react-bootstrap/Nav";import Button from "react-bootstrap/Button
 import Container from "react-bootstrap/Container";
 import Form from "react-bootstrap/Form";
 import Navbar from "react-bootstrap/Navbar";
+import Catalog from "./Catalog";
+
 import {
   MDBIcon
 } from "mdb-react-ui-kit";
@@ -75,20 +77,21 @@ const Store = () => {
           <Nav.Link as={NavLink} to="/services/perio">
             Поради стоматологів
           </Nav.Link>
+          <div className="store_nav_info all_services_nav flex-column ">
+            <Nav.Link as={NavLink} to="/services/endodontics">
+              Доставка та оплата
+            </Nav.Link>
+            <Nav.Link as={NavLink} to="/services/perio">
+              Мої замовлення
+            </Nav.Link>
+            <Nav.Link as={NavLink} to="/services/perio">
+              Контакти
+            </Nav.Link>
+          </div>
         </Nav>
-        <Nav className="store_nav_info all_services_nav flex-column ">
-          <Nav.Link as={NavLink} to="/services/endodontics">
-            Доставка та оплата
-          </Nav.Link>
-          <Nav.Link as={NavLink} to="/services/perio">
-            Мої замовлення
-          </Nav.Link>
-          <Nav.Link as={NavLink} to="/services/perio">
-            Контакти
-          </Nav.Link>
-        </Nav>
+
         <div className="all_services_content col-9">
-          <Outlet />
+          <Catalog />
         </div>
       </div>
     </div>

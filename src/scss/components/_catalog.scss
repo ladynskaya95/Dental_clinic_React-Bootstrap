@@ -1,0 +1,22 @@
+.catalog{
+    background-color: #fff;
+    display: flex;
+    height: 100vh;
+    padding: 20px 5px;
+    width: 100%;
+
+    &_categories{
+        margin: 30px;
+        width: 100%;
+        
+        &_item{
+            height: 30%;
+            margin: 20px;
+
+            &_carousel{
+                align-items: center;
+                margin: 30px;
+            }
+        }
+    }
+}
