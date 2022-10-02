@@ -5,14 +5,40 @@ const Occlusion = () => {
       <div className="services_occlusion">
         <h2>Виправлення прикусу</h2>
         <div className="services_occlusion_row row">
-          <div className="col-4 services_occlusion_item">Брекети</div>
           <div className="col-4 services_occlusion_item">
-            Капи для вирівнювання зубів
+            <div className="card">
+              <div className="card-body">
+                <h3>Брекети</h3>
+              </div>
+            </div>
           </div>
-          <div className="col-4 services_occlusion_item">Пластинки на зуби</div>
-          <div className="col-4 services_occlusion_item">Ортодіагностика</div>
           <div className="col-4 services_occlusion_item">
-            Капи інвізілайн
+            <div className="card">
+              <div className="card-body">
+                <h3>Капи для вирівнювання зубів</h3>
+              </div>
+            </div>
+          </div>
+          <div className="col-4 services_occlusion_item">
+            <div className="card">
+              <div className="card-body">
+                <h3>Пластинки на зуби</h3>
+              </div>
+            </div>
+          </div>
+          <div className="col-4 services_occlusion_item">
+            <div className="card">
+              <div className="card-body">
+                <h3>Ортодіагностика</h3>
+              </div>
+            </div>
+          </div>
+          <div className="col-4 services_occlusion_item">
+            <div className="card">
+              <div className="card-body">
+                <h3>Капи інвізілайн</h3>
+              </div>
+            </div>
           </div>
         </div>
       </div>

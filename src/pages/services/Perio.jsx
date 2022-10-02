@@ -5,9 +5,19 @@ const Perio = () => {
     <div className="services_perio">
       <h2>Лікування ясен</h2>
       <div className="services_perio_row row">
-        <div className="col-5 services_perio_item">Вектор-терапія</div>
         <div className="col-5 services_perio_item">
-          Кюретаж
+          <div className="card">
+            <div className="card-body">
+              <h3>Вектор-терапія</h3>
+            </div>
+          </div>
+        </div>
+        <div className="col-5 services_perio_item">
+          <div className="card">
+            <div className="card-body">
+              <h3>Кюретаж</h3>
+            </div>
+          </div>
         </div>
       </div>
     </div>

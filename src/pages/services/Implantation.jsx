@@ -6,10 +6,18 @@ const Implantation = () => {
       <h2>Імплантація зубів</h2>
       <div className="services_implantation_row row">
         <div className="col-5 services_implantation_item">
-          Медичний сон
+          <div className="card">
+            <div className="card-body">
+              <h3>Медичний сон</h3>
+            </div>
+          </div>
         </div>
         <div className="col-5 services_implantation_item">
-          Встановлення імплантів
+          <div className="card">
+            <div className="card-body">
+              <h3>Встановлення імплантів</h3>
+            </div>
+          </div>
         </div>
       </div>
     </div>
