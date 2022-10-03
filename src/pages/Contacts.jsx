@@ -5,10 +5,16 @@ import Col from "react-bootstrap/Col";
 import Form from "react-bootstrap/Form";
 import Row from "react-bootstrap/Row";
 
+import { MDBContainer, MDBBtn } from "mdb-react-ui-kit";
+
+import AppContext from "../AppContext";
+
 const Contacts = () => {
+  const { links } = React.useContext(AppContext);
+
   return (
-    <>
-      <div className="row">
+    <div className="contacts">
+      <div className="contacts_item contacts_item_info row">
         <div className="col-5">
           <h3>Контакти</h3>
           <p>
@@ -24,21 +30,21 @@ const Contacts = () => {
         </div>
       </div>
       <div>
-        <div className="row">
-          <div className="card col-5">
+        <div className="row contacts_item contacts_item_form">
+          <div className="card col-5 left_form">
             <div className="card-body">
               <div>
                 <h4>Запишіться до нас на прийом</h4>
                 <p>Є питання до спеціаліста? </p>
                 <p>Задавайте і дізнаєтесь які результати ви можете отримати </p>
-                
+
                 <Button variant="primary" type="submit">
                   Записатися на консультацію
                 </Button>
               </div>
             </div>
           </div>
-          <div className="card col-7">
+          <div className="card col-6 right_form">
             <div className="card-body">
               <Form>
                 <Row className="mb-3">
@@ -71,7 +77,29 @@ const Contacts = () => {
           </div>
         </div>
       </div>
-    </>
+      <div>
+        <div className="footer_icons">
+          <MDBContainer className="p-4 d-flex icons">
+            <section className="mb-4">
+              {links.map((link) => (
+                <MDBBtn
+                  key={link.id}
+                  outline
+                  color="light"
+                  floating
+                  className="m-1"
+                  href={link.href}
+                  target="_blank"
+                  role="button"
+                >
+                  {link.page}
+                </MDBBtn>
+              ))}
+            </section>
+          </MDBContainer>
+        </div>
+      </div>
+    </div>
   );
 }
 

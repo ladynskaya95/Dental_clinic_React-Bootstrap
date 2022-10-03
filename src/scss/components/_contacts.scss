@@ -1,0 +1,26 @@
+.contacts{
+    margin: 40px;
+    padding: 20px;
+    &_item{
+
+        &_form{
+            height: 440px !important;
+            .card{
+                margin: 20px;
+                
+                &-body{
+                    background-color: #fff;
+                }
+            }
+            .right_form{
+                height: 400px !important;
+            }
+            .left_form{
+                height: 340px !important;
+            }
+        }
+        &_info{
+            height: 400px;
+        }
+    }
+}

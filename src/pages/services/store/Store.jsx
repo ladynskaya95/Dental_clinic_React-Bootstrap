@@ -24,7 +24,7 @@ const Store = () => {
                 navbarScroll
               >
                 <Nav.Link href="#action2" className="justify-content-end">
-                  {" "}
+                  
                   +38 (044) 344 12 75
                 </Nav.Link>
               </Nav>
