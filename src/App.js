@@ -61,7 +61,9 @@ function App() {
             <Route path="perio" element={<Perio />} />
           </Route>
           <Route path="/contacts" element={<Contacts />} />
-          <Route path="/store" element={<Store />} />
+          <Route path="/store/*" element={<Store />}>
+            <Route path="catalog" element={<Catalog />} />
+          </Route>
         </Routes>
       </div>
     </AppContext.Provider>

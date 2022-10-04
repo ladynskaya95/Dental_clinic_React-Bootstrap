@@ -1,3 +1,20 @@
+.store{
+
+    &_header{
+       width: 100%;
+       padding: 10px 30px;
+       margin: 0;
+
+       &_brand{
+        padding: 0 115px;
+       }
+       &_phone {
+        text-align: right;
+       }
+    }
+}
+
+
 .store_nav_info{
     margin: 20px 0 10px 0;
     font-size: 20px;
