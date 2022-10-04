@@ -1,5 +1,5 @@
 import React from 'react'
-import { Outlet, NavLink } from "react-router-dom";
+import { NavLink, Outlet } from "react-router-dom";
 import Nav from "react-bootstrap/Nav";import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";
 import Form from "react-bootstrap/Form";
@@ -24,7 +24,6 @@ const Store = () => {
                 navbarScroll
               >
                 <Nav.Link href="#action2" className="justify-content-end">
-                  
                   +38 (044) 344 12 75
                 </Nav.Link>
               </Nav>
@@ -44,54 +43,54 @@ const Store = () => {
           </Container>
         </Navbar>
         <Nav className="all_services_nav flex-column col-3">
-          <Nav.Link as={NavLink} to="/services/first_appointment">
+          <Nav.Link as={NavLink} to="/store/toothbrash">
             Зубна щітка
           </Nav.Link>
-          <Nav.Link as={NavLink} to="/services/aesthetics">
+          <Nav.Link as={NavLink} to="/store/toothpaste">
             Зубна паста
           </Nav.Link>
-          <Nav.Link as={NavLink} to="/services/oralHygiene">
+          <Nav.Link as={NavLink} to="/services/dental_floss">
             Зубна нитка, флос
           </Nav.Link>
-          <Nav.Link as={NavLink} to="/services/children">
+          <Nav.Link as={NavLink} to="/store/toothbrushes">
             Йоршики для зубів
           </Nav.Link>
-          <Nav.Link as={NavLink} to="/services/toothDecay">
+          <Nav.Link as={NavLink} to="/store/rinse">
             Ополіскувач
           </Nav.Link>
-          <Nav.Link as={NavLink} to="/services/occlusion">
+          <Nav.Link as={NavLink} to="/store/irrigator">
             Іригатор
           </Nav.Link>
-          <Nav.Link as={NavLink} to="/services/implantation">
+          <Nav.Link as={NavLink} to="/store/kits">
             Набори для догляду
           </Nav.Link>
-          <Nav.Link as={NavLink} to="/services/surgery">
+          <Nav.Link as={NavLink} to="/store/spec_oral_hygiene">
             Спеціалізовані засоби гігієни
           </Nav.Link>
-          <Nav.Link as={NavLink} to="/services/endodontics">
+          <Nav.Link as={NavLink} to="/store/discounts">
             Акції/Знижки
           </Nav.Link>
-          <Nav.Link as={NavLink} to="/services/perio">
+          <Nav.Link as={NavLink} to="/store/gift">
             Подарунковий сертифікат
           </Nav.Link>
-          <Nav.Link as={NavLink} to="/services/perio">
+          <Nav.Link as={NavLink} to="/store/dental_advice">
             Поради стоматологів
           </Nav.Link>
           <div className="store_nav_info all_services_nav flex-column ">
-            <Nav.Link as={NavLink} to="/services/endodontics">
+            <Nav.Link as={NavLink} to="/store/delivery_and_payment">
               Доставка та оплата
             </Nav.Link>
-            <Nav.Link as={NavLink} to="/services/perio">
+            <Nav.Link as={NavLink} to="/store/my_orders">
               Мої замовлення
             </Nav.Link>
-            <Nav.Link as={NavLink} to="/services/perio">
+            <Nav.Link as={NavLink} to="/contacts">
               Контакти
             </Nav.Link>
           </div>
         </Nav>
 
         <div className="all_services_content col-9">
-          <Catalog />
+          <Outlet />
         </div>
       </div>
     </div>

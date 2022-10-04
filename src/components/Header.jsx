@@ -16,7 +16,7 @@ const Header = () => {
     { id: 2, path: "/about", name: "Про нас" },
     { id: 3, path: "/services/first_appointment", name: "Послуги" },
     { id: 4, path: "/contacts", name: "Контакти" },
-    { id: 5, path: "/store", name: "Магазин" },
+    { id: 5, path: "/store/catalog", name: "Магазин" },
   ];
   return (
     <>

@@ -9,7 +9,7 @@ import Home from "./pages/Home"
 import About from "./pages/About";
 import AllServices from "./pages/services/AllServices";
 import Contacts from './pages/Contacts';
-import Store from './pages/services/store/Store';
+import Store from './pages/store/Store';
 import Callback from "./components/Callback";
 import FirstAppointment from "./pages/services/FirstAppointment";
 import Aesthetics from "./pages/services/Aesthetics";
@@ -21,6 +21,7 @@ import Implantation from "./pages/services/Implantation";
 import Surgery from "./pages/services/Surgery";
 import Endodontics from "./pages/services/Endodontics";
 import Perio from "./pages/services/Perio";
+import Catalog from "./pages/store/Catalog";
 
 import AppContext from "./AppContext";
 
