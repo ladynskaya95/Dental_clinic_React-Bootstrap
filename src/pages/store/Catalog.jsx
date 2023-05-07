@@ -1,8 +1,10 @@
-import React from 'react'
+import React, { useEffect } from "react";
+import { useSelector, useDispatch } from "react-redux";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 
+import { setCurrentSlide } from "../../redux/slices/carouselSlice";
 
 function SampleNextArrow(props) {
   const { className, style, onClick } = props;
@@ -26,173 +28,38 @@ function SamplePrevArrow(props) {
   );
 }
 
+const Catalog = ({ items }) => {
+  const currentSlide = useSelector((state) => state.carousel.currentSlide);
+  const dispatch = useDispatch();
 
-const Catalog = () => {
   const settings = {
     dots: true,
     infinite: true,
     speed: 500,
     slidesToShow: 4,
     slidesToScroll: 3,
+    initialSlide: currentSlide,
+    afterChange: (index) => {
+      dispatch(setCurrentSlide(index));
+    },
     nextArrow: <SampleNextArrow />,
     prevArrow: <SamplePrevArrow />,
   };
 
+  useEffect(() => {
+    // Reset current slide on items change
+    dispatch(setCurrentSlide(0));
+  }, [items]);
+
   return (
-    <div className="catalog">
-      <div className="catalog_categories flex-column">
-        <div className="catalog_categories_sale catalog_categories_item">
-          <h3>Акції</h3>
-          <Slider {...settings}>
-            <div className="card product">
-              <div className="card-body product-body">
-                <h3>1</h3>
-              </div>
-            </div>
-            <div className="card product">
-              <div className="card-body product-body">
-                <h3>1</h3>
-              </div>
-            </div>
-            <div className="card product">
-              <div className="card-body product-body">
-                <h3>1</h3>
-              </div>
-            </div>
-            <div className="card product">
-              <div className="card-body product-body">
-                <h3>1</h3>
-              </div>
-            </div>
-            <div className="card product">
-              <div className="card-body product-body">
-                <h3>1</h3>
-              </div>
-            </div>
-            <div className="card product">
-              <div className="card-body product-body">
-                <h3>1</h3>
-              </div>
-            </div>
-            <div className="card product">
-              <div className="card-body product-body">
-                <h3>1</h3>
-              </div>
-            </div>
-            <div className="card product">
-              <div className="card-body product-body">
-                <h3>1</h3>
-              </div>
-            </div>
-            <div className="card product">
-              <div className="card-body product-body">
-                <h3>1</h3>
-              </div>
-            </div>
-          </Slider>
+    <Slider {...settings}>
+      {items.map((item, index) => (
+        <div key={index}>
+          <img src={item.imageUrl} alt={item.caption} />
+          <p>{item.caption}</p>
         </div>
-        <div className="catalog_categories_sale catalog_categories_item">
-          <h3>Бестселлери</h3>
-          <Slider {...settings}>
-            <div className="card product">
-              <div className="card-body product-body">
-                <h3>1</h3>
-              </div>
-            </div>
-            <div className="card product">
-              <div className="card-body product-body">
-                <h3>1</h3>
-              </div>
-            </div>
-            <div className="card product">
-              <div className="card-body product-body">
-                <h3>1</h3>
-              </div>
-            </div>
-            <div className="card product">
-              <div className="card-body product-body">
-                <h3>1</h3>
-              </div>
-            </div>
-            <div className="card product">
-              <div className="card-body product-body">
-                <h3>1</h3>
-              </div>
-            </div>
-            <div className="card product">
-              <div className="card-body product-body">
-                <h3>1</h3>
-              </div>
-            </div>
-            <div className="card product">
-              <div className="card-body product-body">
-                <h3>1</h3>
-              </div>
-            </div>
-            <div className="card product">
-              <div className="card-body product-body">
-                <h3>1</h3>
-              </div>
-            </div>
-            <div className="card product">
-              <div className="card-body product-body">
-                <h3>1</h3>
-              </div>
-            </div>
-          </Slider>
-        </div>
-        <div className="catalog_categories_sale catalog_categories_item">
-          <h3>Поради лікарів</h3>
-          <Slider {...settings}>
-            <div className="card product">
-              <div className="card-body product-body">
-                <h3>1</h3>
-              </div>
-            </div>
-            <div className="card product">
-              <div className="card-body product-body">
-                <h3>1</h3>
-              </div>
-            </div>
-            <div className="card product">
-              <div className="card-body product-body">
-                <h3>1</h3>
-              </div>
-            </div>
-            <div className="card product">
-              <div className="card-body product-body">
-                <h3>1</h3>
-              </div>
-            </div>
-            <div className="card product">
-              <div className="card-body product-body">
-                <h3>1</h3>
-              </div>
-            </div>
-            <div className="card product">
-              <div className="card-body product-body">
-                <h3>1</h3>
-              </div>
-            </div>
-            <div className="card product">
-              <div className="card-body product-body">
-                <h3>1</h3>
-              </div>
-            </div>
-            <div className="card product">
-              <div className="card-body product-body">
-                <h3>1</h3>
-              </div>
-            </div>
-            <div className="card product">
-              <div className="card-body product-body">
-                <h3>1</h3>
-              </div>
-            </div>
-          </Slider>
-        </div>
-      </div>
-    </div>
+      ))}
+    </Slider>
   );
 };
 

@@ -40,6 +40,12 @@ function App() {
     { id: 4, page: <Instagram />, href: "https://www.instagram.com/" },
   ];
 
+  const items = [
+    { imageUrl: "https://placeimg.com/640/480/animals", caption: "Animal 1" },
+    { imageUrl: "https://placeimg.com/640/480/nature", caption: "Nature 2" },
+    { imageUrl: "https://placeimg.com/640/480/people", caption: "People 3" },
+  ];
+
   return (
     <AppContext.Provider value={{ show, setShow, links }}>
       <div className="App container-fluid">
@@ -62,7 +68,7 @@ function App() {
           </Route>
           <Route path="/contacts" element={<Contacts />} />
           <Route path="/store/*" element={<Store />}>
-            <Route path="catalog" element={<Catalog />} />
+            <Route path="catalog" element={<Catalog items={items} />} />
           </Route>
         </Routes>
       </div>

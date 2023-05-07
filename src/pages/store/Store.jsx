@@ -4,7 +4,7 @@ import Nav from "react-bootstrap/Nav";import Button from "react-bootstrap/Button
 import Container from "react-bootstrap/Container";
 import Form from "react-bootstrap/Form";
 import Navbar from "react-bootstrap/Navbar";
-import Catalog from "./Catalog";
+
 
 import {
   MDBIcon
