@@ -1,7 +1,7 @@
 import React from 'react'
 import {  MDBContainer, MDBBtn } from "mdb-react-ui-kit";
 
-import AppContext from "../AppContext";
+
 
 import Map from "../components/Map"
 
@@ -9,8 +9,7 @@ import Map from "../components/Map"
 
 
 const Footer = () => {
-    const { show, setShow, links } = React.useContext(AppContext);
-    const handleShow = () => setShow(true);
+    
 
   const dentistry = [
     "Статті" ,
@@ -34,7 +33,7 @@ const Footer = () => {
           <p>(044) 333-64-72 </p>
           <p>(044) 333-64-73</p>
           <button
-            onClick={handleShow}
+            
             type="button"
             className="phone-callback_link btn btn-primary"
           >
@@ -44,7 +43,7 @@ const Footer = () => {
         <div className="footer_icons">
           <MDBContainer className="p-4 d-flex icons">
             <section className="mb-4">
-              {links.map((link) => (
+              {/* {links.map((link) => (
                 <MDBBtn
                   key={link.id}
                   outline
@@ -57,7 +56,7 @@ const Footer = () => {
                 >
                   {link.page}
                 </MDBBtn>
-              ))}
+              ))} */}
             </section>
           </MDBContainer>
         </div>

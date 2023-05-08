@@ -1,39 +1,62 @@
 import React from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import Modal from "react-bootstrap/Modal";
 
 import AppContext from "../AppContext";
-import { hideModal } from "../redux/slices/modalSlice";
+import { toggleModal, updateName, updatePhoneNumber, selectModalStatus, selectName, selectPhoneNumber } from '../redux/slices/modalSlice';
 
 function Callback() {
-  const { show, setShow } = React.useContext(AppContext);
+  // const { show, setShow } = React.useContext(AppContext);
 const dispatch = useDispatch();
-const closeModal = () => {
-  dispatch(hideModal());
-};
-  const handleClose = () => setShow(false);
+const isModalOpen = useSelector(selectModalStatus);
+  const name = useSelector(selectName);
+  const phoneNumber = useSelector(selectPhoneNumber);
+
+  // const handleClose = () => setShow(false);
+   const closeModal = () => {
+    dispatch(toggleModal(false));
+  };
+
+  const handleNameChange = (event) => {
+    dispatch(updateName(event.target.value));
+  };
+
+  const handlePhoneNumberChange = (event) => {
+    dispatch(updatePhoneNumber(event.target.value));
+  };
 
   return (
     <>
-      <Modal show={show} onHide={handleClose}>
-        <Modal.Header closeButton>
+      <Modal show={isModalOpen} onHide={closeModal}>
+        <Modal.Header closeButton onClick={closeModal}>
           <Modal.Title>Modal heading</Modal.Title>
         </Modal.Header>
         <Modal.Body>
           <Form>
             <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
               <Form.Label>Ваше ім'я</Form.Label>
-              <Form.Control type="text" placeholder="Ім'я" autoFocus />
+              <Form.Control
+                type="text"
+                placeholder="Ім'я"
+                autoFocus
+                value={name}
+                onChange={handleNameChange}
+              />
             </Form.Group>
             <Form.Group
               className="mb-3"
               controlId="exampleForm.ControlTextarea1"
             >
               <Form.Label>Номер телефону</Form.Label>
-              <Form.Control type="text" placeholder="Номер телефону" />
+              <Form.Control
+                type="text"
+                placeholder="Номер телефону"
+                alue={phoneNumber}
+                onChange={handlePhoneNumberChange}
+              />
             </Form.Group>
           </Form>
         </Modal.Body>

@@ -1,15 +1,25 @@
 import React from 'react'
 import { Link} from "react-router-dom";
+import {  useDispatch } from "react-redux";
+import { toggleModal } from "../redux/slices/modalSlice";
 import Dropdown from "react-bootstrap/Dropdown";
 import Image from "react-bootstrap/Image";
+import Callback from "./Callback"
 
 import logo from "../img/logo.png";
 
-import AppContext from "../AppContext";
+// import AppContext from "../AppContext";
+import { showModal } from "../redux/slices/modalSlice";
+
 
 const Header = () => {
-  const { show, setShow } = React.useContext(AppContext);
-  const handleShow = () => setShow(true);
+   const dispatch = useDispatch();
+  // const { show, setShow } = React.useContext(AppContext);
+  // const handleShow = () => setShow(true);
+    const handleClick = () => {
+      dispatch(toggleModal(true));
+    };
+    
 
   const links = [
     { id: 1, path: "/", name: "Головна" },
@@ -71,11 +81,12 @@ const Header = () => {
               </a>
               <div className="phone-callback">
                 <button
-                  onClick={handleShow}
+                  onClick={handleClick}
                   className="btn btn-outline-primary phone-callback_link"
                 >
                   Записатися на консультацію
                 </button>
+                <Callback/>
               </div>
             </div>
           </div>

@@ -23,7 +23,7 @@ import Endodontics from "./pages/services/Endodontics";
 import Perio from "./pages/services/Perio";
 import Catalog from "./pages/shop/Catalog";
 
-import AppContext from "./AppContext";
+// import AppContext from "./AppContext";
 
 import { ReactComponent as Twitter } from "./svg/twitter.svg";
 import { ReactComponent as Whatsapp } from "./svg/whatsapp.svg";
@@ -31,7 +31,7 @@ import { ReactComponent as Facebook } from "./svg/facebook.svg";
 import { ReactComponent as Instagram } from "./svg/instagram.svg";
 
 function App() {
-  const [show, setShow] = useState(false);
+  // const [show, setShow] = useState(false);
 
   const links = [
     { id: 1, page: <Twitter />, href: "https://twitter.com/" },
@@ -44,7 +44,7 @@ function App() {
 
   
   return (
-    <AppContext.Provider value={{ show, setShow, links }}>
+    
       <div className="App container-fluid">
         <Header />
         <Callback />
@@ -69,7 +69,7 @@ function App() {
           </Route>
         </Routes>
       </div>
-    </AppContext.Provider>
+    
   );
 }
 
