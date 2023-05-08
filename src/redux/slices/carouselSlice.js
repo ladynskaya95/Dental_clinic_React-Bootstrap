@@ -1,32 +1,28 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-const carouselSlice = createSlice({
+export const carouselSlice = createSlice({
   name: "carousel",
-  initialState: {
-    images: [],
-    currentIndex: 0,
-  },
+  initialState: {},
   reducers: {
     setImages: (state, action) => {
-      state.images = action.payload;
+      const { id, images } = action.payload;
+      state[id] = {
+        images,
+        currentIndex: 0,
+      };
     },
     setCurrentIndex: (state, action) => {
-      state.currentIndex = action.payload;
+      const { id, currentIndex } = action.payload;
+      state[id].currentIndex = currentIndex;
     },
-    nextImage: (state) => {
-      if (state.currentIndex < state.images.length - 1) {
-        state.currentIndex++;
-      } else {
-        state.currentIndex = 0;
-      }
+    nextImage: (state, action) => {
+      const { id } = action.payload;
+      state[id].currentIndex++;
     },
-    previousImage: (state) => {
-      if (state.currentIndex > 0) {
-        state.currentIndex--;
-      } else {
-        state.currentIndex = state.images.length - 1;
-      }
-    }
+    previousImage: (state, action) => {
+      const { id } = action.payload;
+      state[id].currentIndex--;
+    },
   },
 });
 

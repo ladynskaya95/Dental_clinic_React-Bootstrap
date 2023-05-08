@@ -9,7 +9,7 @@ import Home from "./pages/Home"
 import About from "./pages/About";
 import AllServices from "./pages/services/AllServices";
 import Contacts from './pages/Contacts';
-import Store from './pages/store/Store';
+import Store from './pages/shop/Store';
 import Callback from "./components/Callback";
 import FirstAppointment from "./pages/services/FirstAppointment";
 import Aesthetics from "./pages/services/Aesthetics";
@@ -21,7 +21,7 @@ import Implantation from "./pages/services/Implantation";
 import Surgery from "./pages/services/Surgery";
 import Endodontics from "./pages/services/Endodontics";
 import Perio from "./pages/services/Perio";
-import Catalog from "./pages/store/Catalog";
+import Catalog from "./pages/shop/Catalog";
 
 import AppContext from "./AppContext";
 
@@ -40,12 +40,9 @@ function App() {
     { id: 4, page: <Instagram />, href: "https://www.instagram.com/" },
   ];
 
-  const items = [
-    { imageUrl: "https://placeimg.com/640/480/animals", caption: "Animal 1" },
-    { imageUrl: "https://placeimg.com/640/480/nature", caption: "Nature 2" },
-    { imageUrl: "https://placeimg.com/640/480/people", caption: "People 3" },
-  ];
 
+
+  
   return (
     <AppContext.Provider value={{ show, setShow, links }}>
       <div className="App container-fluid">
@@ -68,7 +65,7 @@ function App() {
           </Route>
           <Route path="/contacts" element={<Contacts />} />
           <Route path="/store/*" element={<Store />}>
-            <Route path="catalog" element={<Catalog items={items} />} />
+            <Route path="catalog" element={<Catalog  />} />
           </Route>
         </Routes>
       </div>
