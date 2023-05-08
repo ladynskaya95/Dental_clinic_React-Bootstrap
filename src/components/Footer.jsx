@@ -1,15 +1,21 @@
 import React from 'react'
 import {  MDBContainer, MDBBtn } from "mdb-react-ui-kit";
-
+import { useDispatch } from "react-redux";
+import { toggleModal } from "../redux/slices/modalSlice";
 
 
 import Map from "../components/Map"
-
+import Callback from "./Callback";
 
 
 
 const Footer = () => {
-    
+     const dispatch = useDispatch();
+     // const { show, setShow } = React.useContext(AppContext);
+     // const handleShow = () => setShow(true);
+     const handleClick = () => {
+       dispatch(toggleModal(true));
+     };
 
   const dentistry = [
     "Статті" ,
@@ -33,12 +39,13 @@ const Footer = () => {
           <p>(044) 333-64-72 </p>
           <p>(044) 333-64-73</p>
           <button
-            
+            onClick={handleClick}
             type="button"
             className="phone-callback_link btn btn-primary"
           >
             Запис на прийом
           </button>
+          <Callback />
         </div>
         <div className="footer_icons">
           <MDBContainer className="p-4 d-flex icons">
