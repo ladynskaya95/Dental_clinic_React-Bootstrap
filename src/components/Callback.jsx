@@ -1,13 +1,19 @@
 import React from "react";
+import { useDispatch } from "react-redux";
+
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import Modal from "react-bootstrap/Modal";
 
- import AppContext from "../AppContext";
+import AppContext from "../AppContext";
+import { hideModal } from "../redux/slices/modalSlice";
 
 function Callback() {
- const { show, setShow } = React.useContext(AppContext);
-
+  const { show, setShow } = React.useContext(AppContext);
+const dispatch = useDispatch();
+const closeModal = () => {
+  dispatch(hideModal());
+};
   const handleClose = () => setShow(false);
 
   return (
@@ -32,10 +38,10 @@ function Callback() {
           </Form>
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="secondary" onClick={handleClose}>
+          <Button variant="secondary" onClick={closeModal}>
             Close
           </Button>
-          <Button variant="primary" onClick={handleClose}>
+          <Button variant="primary" onClick={closeModal}>
             Save Changes
           </Button>
         </Modal.Footer>
@@ -43,4 +49,4 @@ function Callback() {
     </>
   );
 }
- export default Callback
+export default Callback;
