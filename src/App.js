@@ -33,12 +33,7 @@ import { ReactComponent as Instagram } from "./svg/instagram.svg";
 function App() {
   // const [show, setShow] = useState(false);
 
-  const links = [
-    { id: 1, page: <Twitter />, href: "https://twitter.com/" },
-    { id: 2, page: <Whatsapp />, href: "https://web.whatsapp.com/" },
-    { id: 3, page: <Facebook />, href: "https://www.facebook.com/" },
-    { id: 4, page: <Instagram />, href: "https://www.instagram.com/" },
-  ];
+  
 
 
 

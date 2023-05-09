@@ -6,7 +6,7 @@ import { toggleModal } from "../redux/slices/modalSlice";
 
 import Map from "../components/Map"
 import Callback from "./Callback";
-
+import Links from "../components/Links";
 
 
 const Footer = () => {
@@ -48,24 +48,7 @@ const Footer = () => {
           <Callback />
         </div>
         <div className="footer_icons">
-          <MDBContainer className="p-4 d-flex icons">
-            <section className="mb-4">
-              {/* {links.map((link) => (
-                <MDBBtn
-                  key={link.id}
-                  outline
-                  color="light"
-                  floating
-                  className="m-1"
-                  href={link.href}
-                  target="_blank"
-                  role="button"
-                >
-                  {link.page}
-                </MDBBtn>
-              ))} */}
-            </section>
-          </MDBContainer>
+          <Links/>
         </div>
         <div className="footer row">
           <div className="col-4 footer_address">

@@ -11,18 +11,38 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 
 const Carousel = ({ id, images, title }) => {
-    console.log(images)
 //   const dispatch = useDispatch();
   
 //   const { images: carouselImages, currentIndex } = useSelector(
 //     (state) => state.carousel[id]
 //   );
-  const state = useSelector((state) => state);
-  console.log(state);
+
 
 //   useEffect(() => {
 //     dispatch(setImages({ id, images }));
 //   }, [id, images]);
+
+function SampleNextArrow(props) {
+  const { className, style, onClick } = props;
+  return (
+    <div
+      className={className}
+      style={{ ...style, display: "block", background: "blue" }}
+      onClick={onClick}
+    />
+  );
+}
+
+function SamplePrevArrow(props) {
+  const { className, style, onClick } = props;
+  return (
+    <div
+      className={className}
+      style={{ ...style, display: "block", background: "blue" }}
+      onClick={onClick}
+    />
+  );
+}
 
   const settings = {
     dots: true,
@@ -30,6 +50,8 @@ const Carousel = ({ id, images, title }) => {
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 1,
+    nextArrow: <SampleNextArrow />,
+    prevArrow: <SamplePrevArrow />,
     // beforeChange: (oldIndex, newIndex) => {
     //   dispatch(setCurrentIndex({ id, currentIndex: newIndex }));
     // },
@@ -41,8 +63,8 @@ const Carousel = ({ id, images, title }) => {
       <div>
         <h1>{title}</h1>
         <Slider {...settings}>
-          {images.map((image, index) => (
-            <div className="card product" key={index}>
+          {images.map((image, id) => (
+            <div className="card product" key={id}>
               <div className="card-body product-body">
                 <img src={image} />
                 <h3>1</h3>

@@ -4,13 +4,18 @@ import Button from "react-bootstrap/Button";
 import Col from "react-bootstrap/Col";
 import Form from "react-bootstrap/Form";
 import Row from "react-bootstrap/Row";
-
-import { MDBContainer, MDBBtn } from "mdb-react-ui-kit";
-
-import AppContext from "../AppContext";
+import Callback from "./Callback";
+import Links from '../components/Links';
+import { useDispatch } from "react-redux";
+import { toggleModal } from "../redux/slices/modalSlice";
 
 const Contacts = () => {
-  const { links } = React.useContext(AppContext);
+  const dispatch = useDispatch();
+  // const { show, setShow } = React.useContext(AppContext);
+  // const handleShow = () => setShow(true);
+  const handleClick = () => {
+    dispatch(toggleModal(true));
+  };
 
   return (
     <div className="contacts">
@@ -38,9 +43,10 @@ const Contacts = () => {
                 <p>Є питання до спеціаліста? </p>
                 <p>Задавайте і дізнаєтесь які результати ви можете отримати </p>
 
-                <Button variant="primary" type="submit">
+                <Button onClick={handleClick} variant="primary" type="submit">
                   Записатися на консультацію
                 </Button>
+                <Callback />
               </div>
             </div>
           </div>
@@ -79,24 +85,7 @@ const Contacts = () => {
       </div>
       <div>
         <div className="footer_icons">
-          <MDBContainer className="p-4 d-flex icons">
-            <section className="mb-4">
-              {links.map((link) => (
-                <MDBBtn
-                  key={link.id}
-                  outline
-                  color="light"
-                  floating
-                  className="m-1"
-                  href={link.href}
-                  target="_blank"
-                  role="button"
-                >
-                  {link.page}
-                </MDBBtn>
-              ))}
-            </section>
-          </MDBContainer>
+          <Links />
         </div>
       </div>
     </div>
