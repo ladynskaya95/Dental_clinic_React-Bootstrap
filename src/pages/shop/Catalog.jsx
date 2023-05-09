@@ -19,15 +19,18 @@ const Catalog = () => {
   ];
 
   return (
-    <div className="carousel">
-      {carousels.map((carousel) => (
-        <Carousel
-          key={carousel.id}
-          id={carousel.id}
-          images={carousel.images}
-          title={carousel.title}
-        />
-      ))}
+    <div className="catalog">
+      <div className="catalog_categories flex-column">
+        {carousels.map((carousel) => (
+          <Carousel
+            className="catalog_categories_item_carousel"
+            key={carousel.id}
+            id={carousel.id}
+            images={carousel.images}
+            title={carousel.title}
+          />
+        ))}
+      </div>
     </div>
   );
 };

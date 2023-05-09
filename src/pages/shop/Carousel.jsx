@@ -37,17 +37,22 @@ const Carousel = ({ id, images, title }) => {
   };
 
   return (
-    <div className="carousel_item">
-      <h1>{title}</h1>
-      <Slider {...settings}>
-        {images.map((image, index) => (
-          <div key={index}>
-            <img src={image} />
-          </div>
-        ))}
-      </Slider>
-      {/* <button onClick={() => dispatch(previousImage())}>Previous</button>
+    <div className="catalog_categories_sale catalog_categories_item">
+      <div>
+        <h1>{title}</h1>
+        <Slider {...settings}>
+          {images.map((image, index) => (
+            <div className="card product" key={index}>
+              <div className="card-body product-body">
+                <img src={image} />
+                <h3>1</h3>
+              </div>
+            </div>
+          ))}
+        </Slider>
+        {/* <button onClick={() => dispatch(previousImage())}>Previous</button>
       <button onClick={() => dispatch(nextImage())}>Next</button> */}
+      </div>
     </div>
   );
 };
