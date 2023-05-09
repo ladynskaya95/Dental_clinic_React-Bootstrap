@@ -4,18 +4,29 @@ const Catalog = () => {
   const carousels = [
     {
       id: 1,
-      images: ["../../img/1.jpg", "../../img/2.jpg", "../../img/3.jpg"],
+      title: "Акції",
+      images: [
+        "../../img/shop/paste/frezzyderm sensiteeth.jpg",
+        "../../img/shop/floss/flosspicsDenTek.jpg",
+        "../../img/shop/spec/oralbrush-cleaner.jpg",
+      ],
     },
     {
       id: 2,
+      title: "Бестселлери",
       images: ["../../img/1.jpg", "../../img/2.jpg", "../../img/3.jpg"],
     },
   ];
 
   return (
-    <div>
+    <div className="carousel">
       {carousels.map((carousel) => (
-        <Carousel key={carousel.id} id={carousel.id} images={carousel.images}  />
+        <Carousel
+          key={carousel.id}
+          id={carousel.id}
+          images={carousel.images}
+          title={carousel.title}
+        />
       ))}
     </div>
   );

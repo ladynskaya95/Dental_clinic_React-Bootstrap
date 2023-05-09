@@ -10,7 +10,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 
-const Carousel = ({ id, images }) => {
+const Carousel = ({ id, images, title }) => {
     console.log(images)
 //   const dispatch = useDispatch();
   
@@ -28,7 +28,7 @@ const Carousel = ({ id, images }) => {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 1,
+    slidesToShow: 3,
     slidesToScroll: 1,
     // beforeChange: (oldIndex, newIndex) => {
     //   dispatch(setCurrentIndex({ id, currentIndex: newIndex }));
@@ -37,7 +37,8 @@ const Carousel = ({ id, images }) => {
   };
 
   return (
-    <div>
+    <div className="carousel_item">
+      <h1>{title}</h1>
       <Slider {...settings}>
         {images.map((image, index) => (
           <div key={index}>
